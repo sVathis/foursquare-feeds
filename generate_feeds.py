@@ -44,7 +44,7 @@ class FeedGenerator:
 
         calendar = self._generate_calendar(checkins)
         print("Writting calendar")
-        with open(self.ics_filepath, "w") as f:
+        with open(self.ics_filepath, "w", newline='') as f:
             f.writelines(calendar)
 
         exit(0)
